@@ -12,9 +12,22 @@ namespace NostalG
 {
     public partial class Form1 : Form
     {
+
+        private void ContextMenuInit()
+        {
+            ContextMenu cm = new ContextMenu();
+
+            cm.MenuItems.Add("Change Wallpaper");
+            cm.MenuItems.Add("Set wallpaper color");
+
+            this.ContextMenu = cm;
+        }
+
         public Form1()
         {
             InitializeComponent();
+
+            ContextMenuInit();
         }
     }
 }
