@@ -34,12 +34,12 @@ namespace NostalG
 
         private void ContextMenuInit()
         {
-            ContextMenu cm = new ContextMenu();
+            var cms = new ContextMenuStrip();
 
-            cm.MenuItems.Add("Change Wallpaper");
-            cm.MenuItems.Add("Set wallpaper color");
+            cms.Items.Add(new ToolStripMenuItem("Change Wallpaper"));
+            cms.Items.Add(new ToolStripMenuItem("Set wallpaper color"));
 
-            this.ContextMenu = cm;
+            this.ContextMenuStrip = cms;
         }
 
         public Background()
