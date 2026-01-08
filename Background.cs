@@ -30,7 +30,7 @@ namespace NostalG
         private const UInt32 SWP_NOACTIVATE = 0x0010;
 
 
-        private ProgramManager _pm;
+        private ProgramManager? _pm;
 
         private void ContextMenuInit()
         {
