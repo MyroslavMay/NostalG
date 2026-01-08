@@ -12,9 +12,9 @@ namespace NostalG.titlebars
 {
     public partial class DefaultProgramBar : UserControl
     {
-        private string _progName;
+        private string? _progName;
 
-        public event EventHandler CloseRequested;
+        public event EventHandler? CloseRequested;
 
         public DefaultProgramBar()
         {
@@ -36,7 +36,7 @@ namespace NostalG.titlebars
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string ProgName
         {
-            get => _progName;
+            get => _progName!;
             set
             {
                 _progName = value;

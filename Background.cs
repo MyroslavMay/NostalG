@@ -30,16 +30,16 @@ namespace NostalG
         private const UInt32 SWP_NOACTIVATE = 0x0010;
 
 
-        private ProgramManager _pm;
+        private ProgramManager? _pm;
 
         private void ContextMenuInit()
         {
-            ContextMenu cm = new ContextMenu();
+            var cms = new ContextMenuStrip();
 
-            cm.MenuItems.Add("Change Wallpaper");
-            cm.MenuItems.Add("Set wallpaper color");
+            cms.Items.Add(new ToolStripMenuItem("Change Wallpaper"));
+            cms.Items.Add(new ToolStripMenuItem("Set wallpaper color"));
 
-            this.ContextMenu = cm;
+            this.ContextMenuStrip = cms;
         }
 
         public Background()

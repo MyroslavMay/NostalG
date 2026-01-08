@@ -30,45 +30,45 @@
         {
             this.progLbl = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // progLbl
             // 
-            this.progLbl.AutoSize = true;
-            this.progLbl.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.progLbl.ForeColor = System.Drawing.Color.White;
-            this.progLbl.Location = new System.Drawing.Point(355, 2);
-            this.progLbl.Name = "progLbl";
-            this.progLbl.Size = new System.Drawing.Size(127, 36);
-            this.progLbl.TabIndex = 0;
-            this.progLbl.Text = "Program";
+            progLbl.AutoSize = true;
+            progLbl.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            progLbl.ForeColor = System.Drawing.Color.White;
+            progLbl.Location = new System.Drawing.Point(355, 2);
+            progLbl.Name = "progLbl";
+            progLbl.Size = new System.Drawing.Size(127, 36);
+            progLbl.TabIndex = 0;
+            progLbl.Text = "Program";
             // 
             // closeBtn
             // 
-            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(172)))), ((int)(((byte)(176)))));
-            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Location = new System.Drawing.Point(0, 0);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(37, 40);
-            this.closeBtn.TabIndex = 1;
-            this.closeBtn.Text = "—";
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(172)))), ((int)(((byte)(176)))));
+            closeBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            closeBtn.ForeColor = System.Drawing.Color.White;
+            closeBtn.Location = new System.Drawing.Point(0, 0);
+            closeBtn.Name = "closeBtn";
+            closeBtn.Size = new System.Drawing.Size(37, 40);
+            closeBtn.TabIndex = 1;
+            closeBtn.Text = "—";
+            closeBtn.UseVisualStyleBackColor = false;
+            closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // Normal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(168)))));
-            this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.progLbl);
+            Controls.Add(this.closeBtn);
+            Controls.Add(this.progLbl);
             this.Name = "Normal";
             this.Size = new System.Drawing.Size(904, 40);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
