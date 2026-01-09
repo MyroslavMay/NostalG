@@ -13,33 +13,18 @@ namespace NostalG
         {
             return Directory.EnumerateDirectories(path).Count();
         }
+
+        public static string[] GetFoldersNames(string path)
+        {
+            return Directory.GetDirectories(path)
+                .Select(Path.GetFileName)
+                .ToArray();
+        }
+
         public static int GetTotalFiles(string path)
         {
             return Directory.GetFiles(path).Length;
         }
-
-        //Bitmap Pixelate(Image source, int pixelSize)
-        //{
-        //    int w = source.Width / pixelSize;
-        //    int h = source.Height / pixelSize;
-
-        //    Bitmap small = new Bitmap(w, h);
-        //    using (Graphics g = Graphics.FromImage(small))
-        //    {
-        //        g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-        //        g.DrawImage(source, 0, 0, w, h);
-        //    }
-
-        //    Bitmap result = new Bitmap(source.Width, source.Height);
-        //    using (Graphics g = Graphics.FromImage(result))
-        //    {
-        //        g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-        //        g.DrawImage(small, 0, 0, result.Width, result.Height);
-        //    }
-
-        //    return result;
-        //}
-
 
     }
 }

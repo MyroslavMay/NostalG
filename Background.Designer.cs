@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            colorDlg = new System.Windows.Forms.ColorDialog();
             SuspendLayout();
+            // 
+            // colorDlg
+            // 
+            colorDlg.AnyColor = true;
+            colorDlg.SolidColorOnly = true;
             // 
             // Background
             // 
@@ -48,6 +54,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColorDialog colorDlg;
     }
 }
 
