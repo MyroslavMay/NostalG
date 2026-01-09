@@ -48,6 +48,7 @@
             ShowInTaskbar = false;
             Text = "NostalG background";
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            Load += Background_Load;
             Shown += Background_Shown;
             ResumeLayout(false);
 

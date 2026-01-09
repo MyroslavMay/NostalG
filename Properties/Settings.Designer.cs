@@ -22,5 +22,17 @@ namespace NostalG.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color BgColor {
+            get {
+                return ((global::System.Drawing.Color)(this["BgColor"]));
+            }
+            set {
+                this["BgColor"] = value;
+            }
+        }
     }
 }

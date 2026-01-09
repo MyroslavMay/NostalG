@@ -36,6 +36,8 @@ namespace NostalG
         {
             colorDlg.ShowDialog();
             this.BackColor = colorDlg.Color;
+            Properties.Settings.Default.BgColor = colorDlg.Color;
+            Properties.Settings.Default.Save();
 
             if (this.BackgroundImage != null)
             {
@@ -63,7 +65,7 @@ namespace NostalG
                     MessageBox.Show("Error loading image: " + ex.Message);
                 }
             }
-                
+
         }
 
         private void ContextMenuInit()
@@ -96,6 +98,11 @@ namespace NostalG
                     _pm.Show();
                 }));
             }
+        }
+
+        private void Background_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.BgColor;
         }
     }
 }
