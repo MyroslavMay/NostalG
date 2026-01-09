@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progLbl = new System.Windows.Forms.Label();
-            this.closeBtn = new System.Windows.Forms.Button();
+            progLbl = new System.Windows.Forms.Label();
+            closeBtn = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // progLbl
             // 
             progLbl.AutoSize = true;
-            progLbl.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            progLbl.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             progLbl.ForeColor = System.Drawing.Color.White;
-            progLbl.Location = new System.Drawing.Point(355, 2);
+            progLbl.Location = new System.Drawing.Point(394, 7);
             progLbl.Name = "progLbl";
             progLbl.Size = new System.Drawing.Size(127, 36);
             progLbl.TabIndex = 0;
@@ -45,28 +45,30 @@
             // 
             // closeBtn
             // 
-            closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(172)))), ((int)(((byte)(176)))));
+            closeBtn.BackColor = System.Drawing.Color.FromArgb(168, 172, 176);
             closeBtn.Dock = System.Windows.Forms.DockStyle.Left;
             closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             closeBtn.ForeColor = System.Drawing.Color.White;
             closeBtn.Location = new System.Drawing.Point(0, 0);
+            closeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             closeBtn.Name = "closeBtn";
-            closeBtn.Size = new System.Drawing.Size(37, 40);
+            closeBtn.Size = new System.Drawing.Size(41, 50);
             closeBtn.TabIndex = 1;
             closeBtn.Text = "—";
             closeBtn.UseVisualStyleBackColor = false;
-            closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            closeBtn.Click += closeBtn_Click;
             // 
-            // Normal
+            // DefaultProgramBar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(168)))));
-            Controls.Add(this.closeBtn);
-            Controls.Add(this.progLbl);
-            this.Name = "Normal";
-            this.Size = new System.Drawing.Size(904, 40);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(0, 0, 168);
+            Controls.Add(closeBtn);
+            Controls.Add(progLbl);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "DefaultProgramBar";
+            Size = new System.Drawing.Size(1004, 50);
             ResumeLayout(false);
             PerformLayout();
 

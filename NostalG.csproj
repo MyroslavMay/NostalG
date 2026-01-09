@@ -10,6 +10,14 @@
     <StartupObject>NostalG.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\MS Sans Serif.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\MS Sans Serif.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

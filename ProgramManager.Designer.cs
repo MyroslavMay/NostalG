@@ -28,35 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.titleBar = new NostalG.titlebars.DefaultProgramBar();
-            this.SuspendLayout();
+            titleBar = new NostalG.titlebars.DefaultProgramBar();
+            mainLayout = new System.Windows.Forms.FlowLayoutPanel();
+            SuspendLayout();
             // 
             // titleBar
             // 
-            this.titleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(168)))));
-            this.titleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titleBar.Location = new System.Drawing.Point(0, 0);
-            this.titleBar.Name = "titleBar";
-            this.titleBar.ProgName = null;
-            this.titleBar.Size = new System.Drawing.Size(800, 43);
-            this.titleBar.TabIndex = 0;
+            titleBar.BackColor = System.Drawing.Color.FromArgb(0, 0, 168);
+            titleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            titleBar.Location = new System.Drawing.Point(0, 0);
+            titleBar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            titleBar.Name = "titleBar";
+            titleBar.ProgName = null;
+            titleBar.Size = new System.Drawing.Size(889, 54);
+            titleBar.TabIndex = 0;
+            // 
+            // mainLayout
+            // 
+            mainLayout.AutoScroll = true;
+            mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainLayout.Location = new System.Drawing.Point(0, 54);
+            mainLayout.Name = "mainLayout";
+            mainLayout.Size = new System.Drawing.Size(889, 508);
+            mainLayout.TabIndex = 1;
             // 
             // ProgramManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.titleBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ProgramManager";
-            this.Text = "Program Manager";
-            this.Load += new System.EventHandler(this.ProgramManager_Load);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(889, 562);
+            Controls.Add(mainLayout);
+            Controls.Add(titleBar);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "ProgramManager";
+            Text = "Program Manager";
+            Load += ProgramManager_Load;
+            ResumeLayout(false);
 
         }
 
         #endregion
 
         private titlebars.DefaultProgramBar titleBar;
+        private System.Windows.Forms.FlowLayoutPanel mainLayout;
     }
 }
