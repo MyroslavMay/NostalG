@@ -36,13 +36,41 @@ namespace NostalG
         {
             colorDlg.ShowDialog();
             this.BackColor = colorDlg.Color;
+
+            if (this.BackgroundImage != null)
+            {
+                this.BackgroundImage = null;
+            }
+        }
+
+        private void ChangeBg(object sender, EventArgs e)
+        {
+            FileDialog fd = new OpenFileDialog();
+            fd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All Files|*.*";
+            fd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            fd.ShowDialog();
+
+            if (!string.IsNullOrEmpty(fd.FileName))
+            {
+                try
+                {
+                    Image img = Image.FromFile(fd.FileName);
+                    this.BackgroundImage = img;
+                    this.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading image: " + ex.Message);
+                }
+            }
+                
         }
 
         private void ContextMenuInit()
         {
             var cms = new ContextMenuStrip();
 
-            cms.Items.Add(new ToolStripMenuItem("Change Wallpaper"));
+            cms.Items.Add(new ToolStripMenuItem("Change Wallpaper", null, ChangeBg));
             cms.Items.Add(new ToolStripMenuItem("Set wallpaper color", null, ChangeBgColor));
 
             this.ContextMenuStrip = cms;
