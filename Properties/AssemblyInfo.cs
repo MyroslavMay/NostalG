@@ -9,9 +9,9 @@ using System.Runtime.Versioning;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NostalG")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A Windows 3.1-like shell")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MyroslavMay")]
 [assembly: AssemblyProduct("NostalG")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
