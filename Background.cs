@@ -32,14 +32,18 @@ namespace NostalG
 
         private ProgramManager? _pm;
 
-        private void ChangeBgColor(object sender, EventArgs e) { }
+        private void ChangeBgColor(object sender, EventArgs e)
+        {
+            colorDlg.ShowDialog();
+            this.BackColor = colorDlg.Color;
+        }
 
         private void ContextMenuInit()
         {
             var cms = new ContextMenuStrip();
 
             cms.Items.Add(new ToolStripMenuItem("Change Wallpaper"));
-            cms.Items.Add(new ToolStripMenuItem("Set wallpaper color", ChangeBgColor));
+            cms.Items.Add(new ToolStripMenuItem("Set wallpaper color", null, ChangeBgColor));
 
             this.ContextMenuStrip = cms;
         }
