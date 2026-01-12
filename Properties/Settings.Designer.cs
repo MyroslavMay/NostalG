@@ -34,5 +34,29 @@ namespace NostalG.Properties {
                 this["BgColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte BgImage {
+            get {
+                return ((byte)(this["BgImage"]));
+            }
+            set {
+                this["BgImage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Tile")]
+        public string BgImageMode {
+            get {
+                return ((string)(this["BgImageMode"]));
+            }
+            set {
+                this["BgImageMode"] = value;
+            }
+        }
     }
 }

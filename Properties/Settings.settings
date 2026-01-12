@@ -5,5 +5,11 @@
     <Setting Name="BgColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">White</Value>
     </Setting>
+    <Setting Name="BgImage" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="BgImageMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tile</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -76,7 +76,7 @@ namespace NostalG.CustomControls
 
             fonts.AddFontFile(Path.Combine(AppContext.BaseDirectory, "Assets", "MS Sans Serif.ttf"));
 
-            folderLbl.Font = new Font(fonts.Families[0], 8f, FontStyle.Bold);
+            folderLbl.Font = new Font(fonts.Families[0], 9f, FontStyle.Regular);
             folderLbl.AutoSize = false;
 
             folderLbl.TextAlign = ContentAlignment.BottomCenter;

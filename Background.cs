@@ -47,24 +47,26 @@ namespace NostalG
 
         private void ChangeBg(object sender, EventArgs e)
         {
-            FileDialog fd = new OpenFileDialog();
-            fd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All Files|*.*";
-            fd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            fd.ShowDialog();
+            //FileDialog fd = new OpenFileDialog();
+            //fd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All Files|*.*";
+            //fd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            //fd.ShowDialog();
 
-            if (!string.IsNullOrEmpty(fd.FileName))
-            {
-                try
-                {
-                    Image img = Image.FromFile(fd.FileName);
-                    this.BackgroundImage = img;
-                    this.BackgroundImageLayout = ImageLayout.Stretch;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading image: " + ex.Message);
-                }
-            }
+            //if (!string.IsNullOrEmpty(fd.FileName))
+            //{
+            //    try
+            //    {
+            //        Image img = Image.FromFile(fd.FileName);
+            //        this.BackgroundImage = img;
+            //        this.BackgroundImageLayout = ImageLayout.Tile;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Error loading image: " + ex.Message);
+            //    }
+            //}
+            Form bgdlg = new Dialogs.BackgroundImage();
+            bgdlg.ShowDialog();
 
         }
 
@@ -103,6 +105,27 @@ namespace NostalG
         private void Background_Load(object sender, EventArgs e)
         {
             this.BackColor = Properties.Settings.Default.BgColor;
+
+            if (Properties.Settings.Default.BgImageMode == "Tile")
+            {
+                this.BackgroundImageLayout = ImageLayout.Tile;
+            }
+            else if (Properties.Settings.Default.BgImageMode == "Center")
+            {
+                this.BackgroundImageLayout = ImageLayout.Center;
+            }
+            else if (Properties.Settings.Default.BgImageMode == "Stretch")
+            {
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            else if (Properties.Settings.Default.BgImageMode == "None")
+            {
+                this.BackgroundImageLayout = ImageLayout.None;
+            }
+            else if (Properties.Settings.Default.BgImageMode == "Zoom")
+            {
+                this.BackgroundImageLayout = ImageLayout.Zoom;
+            }
         }
     }
 }
